@@ -1,0 +1,11 @@
+stages:
+  download:
+    cmd: python3 src/download_dataset.py --dataset ${download.dataset} --out-dir ${download.out_dir}
+    deps:
+      - src/download_dataset.py
+    params:
+      - download.dataset
+      - download.out_dir
+    outs:
+      - data/raw
+      - data/fraud-detection.zip

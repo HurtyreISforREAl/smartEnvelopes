@@ -1,0 +1,24 @@
+schema: '2.0'
+stages:
+  download:
+    cmd: python3 src/download_dataset.py --dataset 
+      iabhishekbhardwaj/fraud-detection --out-dir data
+    deps:
+    - path: src/download_dataset.py
+      hash: md5
+      md5: 2af9ba85d3b695e8f5f8495951a6c775
+      size: 1075
+    params:
+      params.yaml:
+        download.dataset: iabhishekbhardwaj/fraud-detection
+        download.out_dir: data
+    outs:
+    - path: data/fraud-detection.zip
+      hash: md5
+      md5: 26df5185fc131db1442eba0b8cefa123
+      size: 31940637
+    - path: data/raw
+      hash: md5
+      md5: 157f6021c8e5607288368a8b8a44341b.dir
+      size: 609937737
+      nfiles: 1

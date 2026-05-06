@@ -1,0 +1,3 @@
+download:
+  dataset: iabhishekbhardwaj/fraud-detection
+  out_dir: data
